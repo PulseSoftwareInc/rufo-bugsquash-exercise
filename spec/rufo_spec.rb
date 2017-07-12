@@ -24,6 +24,10 @@ def assert_format(code, expected = code, **options)
 end
 
 RSpec.describe Rufo do
+  # New Testcases
+  assert_format "begin\nrescue A\nend"
+  assert_format "begin\nrescue A\nrescue B\nend"
+
   # Empty
   assert_format "", ""
 
